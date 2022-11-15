@@ -1,6 +1,15 @@
-// TODO: write your code here
-import sum from './basic';
+export function user({ special})
+{ 
+    return special.map(({
+        id,
+        name,
+        icon,
+        description = 'Описание недоступно',
+    }) => ({
+        id,
+        name,
+        icon,
+        description,
+    }));
 
-console.log('worked');
-
-console.log(sum([1, 2]));
+}
